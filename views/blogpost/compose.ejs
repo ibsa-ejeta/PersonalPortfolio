@@ -1,0 +1,15 @@
+<%- include('./partials/blogheader.ejs'); -%>
+<div class="main-content">
+    <h1>Compose</h1>
+    <form action='/blog/compose' method='post' class="">
+        <div class='form-group'>
+            <label class='' for='inputT'>Title </label>
+            <input class='form-control' id='inputT' type='text' name='postTitle'>
+            <label for='insideT'>Post </label>
+            <textarea class='form-control' id='insideT' name='postBody' rows='5'></textarea>
+        </div>
+        <button type='submit' class='btn btn-primary'>Publish</button>
+    </form>
+</div>
+
+<%- include('./partials/blogfooter.ejs'); -%>

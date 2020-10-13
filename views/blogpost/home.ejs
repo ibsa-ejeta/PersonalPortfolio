@@ -1,0 +1,31 @@
+<%- include('./partials/blogheader.ejs'); -%>
+<div class="main-content">
+  <h1>Home</h1>
+  <p><%= homeContent %></p>
+
+  <% if (posts.length > 0) { %>
+      <% posts.forEach(post => { %>
+          <h1><%= post.title %></h1>%>
+          <% if (post.content.length > 200) { %>
+              <p><%= post.content.slice(0, 200) + ' ...' %> <a href='posts/<%=post._id%>' > Read More</a></p>
+          <% } else { %>
+              <p><%= post.content %> </p>
+          <% } %>
+      <% }); %>
+      
+  <% } %>
+</div>
+<!-- <div class="jumbotron centered"> -->
+    <!-- <div class="register">
+      <div class="">
+        <i class="fas fa-user-plus fa-2x"></i>
+        <a class="btn btn-light btn-lg" href="blog/Register" role="button">Register</a>
+      </div>
+      <div class="">
+        <i class="fas fa-sign-in-alt fa-2x"></i>
+        <a class="btn btn-dark btn-lg" href="login" role="button">Login</a>
+      </div>
+    </div> -->
+
+<%- include('./partials/blogfooter.ejs'); -%>
+
